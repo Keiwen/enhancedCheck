@@ -1,0 +1,126 @@
+
+
+.enhancedCheck-inline {
+    display: inline;
+}
+
+.enhancedCheck label {
+    border-radius: 3px;
+    border: 1px solid #DDD;
+}
+
+.enhancedCheck input[type="radio"]:empty,
+.enhancedCheck input[type="checkbox"]:empty {
+    display: none;
+}
+
+.enhancedCheck input[type="radio"]:empty + label,
+.enhancedCheck input[type="checkbox"]:empty + label {
+    position: relative;
+    line-height: 2em;
+    text-indent: 2.5em;
+    padding: 0 5px 0 0;
+    cursor: pointer;
+
+}
+
+
+.enhancedCheck input[type="radio"]:empty + label:before,
+.enhancedCheck input[type="checkbox"]:empty + label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2em;
+    background: #DDD;
+    border-radius: 3px 0 0 3px;
+}
+
+.enhancedCheck input[type="radio"]:not(:checked) + label:hover,
+.enhancedCheck input[type="checkbox"]:not(:checked) + label:hover {
+    color: #777;
+}
+
+.enhancedCheck input[type="radio"]:not(:checked) + label:hover:before,
+.enhancedCheck input[type="checkbox"]:not(:checked) + label:hover:before {
+    text-indent: 0.5em;
+    color: #AAA;
+}
+
+.enhancedCheck input[type="radio"]:not(:checked) + label:hover:before {
+    content: '\25CF';
+}
+.enhancedCheck input[type="checkbox"]:not(:checked) + label:hover:before {
+    content: '\2714';
+}
+.enhancedCheck.enhancedCheck-combine input[type="checkbox"]:not(:checked) + label:hover:before {
+    content: '\2795';
+}
+
+.enhancedCheck input[type="radio"]:checked + label,
+.enhancedCheck input[type="checkbox"]:checked + label {
+    color: #AAA;
+}
+
+.enhancedCheck input[type="radio"]:checked + label:before,
+.enhancedCheck input[type="checkbox"]:checked + label:before {
+    text-indent: .5em;
+    color: #000;
+}
+
+.enhancedCheck input[type="radio"]:checked + label:before {
+    content: '\25CF';
+}
+.enhancedCheck input[type="checkbox"]:checked + label:before {
+    content: '\2714';
+}
+.enhancedCheck.enhancedCheck-combine input[type="checkbox"]:checked + label:before {
+    content: '\2795';
+}
+
+.enhancedCheck-primary input[type="radio"]:checked + label:before,
+.enhancedCheck-primary input[type="checkbox"]:checked + label:before {
+    background: #337ab7;
+    color:white;
+}
+
+.enhancedCheck-primary input[type="radio"]:not(:checked) + label:hover,
+.enhancedCheck-primary input[type="checkbox"]:not(:checked) + label:hover {
+    border: 1px solid #337ab7;
+}
+
+.enhancedCheck-success input[type="radio"]:checked + label:before,
+.enhancedCheck-success input[type="checkbox"]:checked + label:before {
+    background: #5cb85c;
+    color:white;
+}
+
+.enhancedCheck-success input[type="radio"]:not(:checked) + label:hover,
+.enhancedCheck-success input[type="checkbox"]:not(:checked) + label:hover {
+    border: 1px solid #5cb85c;
+}
+
+.enhancedCheck-danger input[type="radio"]:checked + label:before,
+.enhancedCheck-danger input[type="checkbox"]:checked + label:before {
+    background: #d9534f;
+    color:white;
+}
+
+.enhancedCheck-danger input[type="radio"]:not(:checked) + label:hover,
+.enhancedCheck-danger input[type="checkbox"]:not(:checked) + label:hover {
+    border: 1px solid #d9534f;
+}
+
+.enhancedCheck-warning input[type="radio"]:checked + label:before,
+.enhancedCheck-warning input[type="checkbox"]:checked + label:before {
+    background: #f0ad4e;
+    color:white;
+}
+
+.enhancedCheck-warning input[type="radio"]:not(:checked) + label:hover,
+.enhancedCheck-warning input[type="checkbox"]:not(:checked) + label:hover {
+    border: 1px solid #f0ad4e;
+}
+
