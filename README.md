@@ -1,6 +1,6 @@
 # enhancedCheck
 
-**Require Bootstrap > 3.0.0**
+**Require Bootstrap >= 3.0.0**
 
 Enhance checkboxes and radio buttons design. Just put input and label (**label after input**) in a div with desired class
 - enhancedCheck: base class:
