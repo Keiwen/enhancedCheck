@@ -50,7 +50,7 @@
 }
 
 .enhancedCheck input[type="radio"]:not(:checked) + label:hover:before {
-    content: '\25CF';
+    content: '\26AB';
 }
 .enhancedCheck input[type="checkbox"]:not(:checked) + label:hover:before {
     content: '\2714';
@@ -71,7 +71,7 @@
 }
 
 .enhancedCheck input[type="radio"]:checked + label:before {
-    content: '\25CF';
+    content: '\26AB';
 }
 .enhancedCheck input[type="checkbox"]:checked + label:before {
     content: '\2714';
