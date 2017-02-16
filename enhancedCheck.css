@@ -7,6 +7,7 @@
 .enhancedCheck label {
     border-radius: 3px;
     border: 1px solid #DDD;
+	color: #AAA;
 }
 
 .enhancedCheck input[type="radio"]:empty,
@@ -61,13 +62,13 @@
 
 .enhancedCheck input[type="radio"]:checked + label,
 .enhancedCheck input[type="checkbox"]:checked + label {
-    color: #AAA;
+    color: inherit;
 }
 
 .enhancedCheck input[type="radio"]:checked + label:before,
 .enhancedCheck input[type="checkbox"]:checked + label:before {
     text-indent: .5em;
-    color: #000;
+    color: inherit;
 }
 
 .enhancedCheck input[type="radio"]:checked + label:before {
