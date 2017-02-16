@@ -7,6 +7,7 @@ Enhance checkboxes and radio buttons design. Just put input and label (**label a
 - enhancedCheck-inline: display inputs inline if they are nested into not-inline div
 - enhancedCheck-[primary|success|danger|warning]: change base color to [blue|green|red|orange]
 - enhancedCheck-combine: alternate design for checkboxes, aiming at grouping values
+- enhancedCheck-animate: color change slowly on select/unselect
 
 *See html or png sample in demo folder*
 
