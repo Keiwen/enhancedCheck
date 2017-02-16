@@ -124,3 +124,9 @@
     border: 1px solid #f0ad4e;
 }
 
+.enhancedCheck.enhancedCheck-animate label:before {
+    transition: background-color 1s ease;
+}
+.enhancedCheck.enhancedCheck-animate label {
+    transition: color 1s ease;
+}
