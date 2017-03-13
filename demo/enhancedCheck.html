@@ -2,77 +2,126 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head >
   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>EnchancedCheck sample</title>
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+
+    <script src="enhancedCheckToggle.js"></script>
+    <script src="enhancedCheckNgModule.js"></script>
+
   <link href="enhancedCheck.css" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            $('#sampleCheckboxToggle').change(function() {
+                console.log('checkbox changed');
+            });
+        });
+
+        var app = angular.module('enhancedCheck', ['ui.enhancedCheck']);
+
+        app.controller('EnhancedCtrl', function ($scope) {
+            $scope.checkbox = true;
+            $scope.combineOne = true;
+            $scope.combineTwo = true;
+            $scope.radio = '';
+            $scope.toggle = false;
+            $scope.toggleDisabled = false;
+        });
+
+    </script>
+
 </head>
 
-<body>
+<body ng-app="enhancedCheck">
 
-	<div class="container" style="margin-top:20px;">
+	<div class="container" style="margin-top:20px;" ng-controller="EnhancedCtrl">
 
         <fieldset>
             <legend>Simple primary checkboxes</legend>
             <div class="enhancedCheck enhancedCheck-primary">
                 <div>
-                <input type="checkbox" id="sampleCheckbox">
+                <input type="checkbox" id="sampleCheckbox" ng-model="checkbox"/>
                 <label for="sampleCheckbox">Checked</label>
+                    Angular checked: {{checkbox}}
                 </div>
                 <div>
-                <input type="checkbox" id="sampleCheckboxHover">
+                <input type="checkbox" id="sampleCheckboxHover"/>
                 <label for="sampleCheckboxHover">Hover</label>
                 </div>
                 <div>
-                <input type="checkbox" id="sampleCheckboxEmpty">
+                <input type="checkbox" id="sampleCheckboxEmpty"/>
                 <label for="sampleCheckboxEmpty">Empty</label>
                 </div>
             </div>
         </fieldset>
 
-        <br/><br/><br/>
+        <br/><br/>
 
         <fieldset>
             <legend>Combined warning checkboxes</legend>
             <div class="enhancedCheck enhancedCheck-inline enhancedCheck-warning  enhancedCheck-combine">
-                <input type="checkbox" id="sampleCombinedCheckbox1">
+                <input type="checkbox" id="sampleCombinedCheckbox1" ng-model="combineOne"/>
                 <label for="sampleCombinedCheckbox1">Combined one</label>
-                <input type="checkbox" id="sampleCombinedCheckbox2">
+                <input type="checkbox" id="sampleCombinedCheckbox2" ng-model="combineTwo"/>
                 <label for="sampleCombinedCheckbox2">Combined two</label>
-                <input type="checkbox" id="sampleCombinedCheckboxHover">
+                <input type="checkbox" id="sampleCombinedCheckboxHover"/>
                 <label for="sampleCombinedCheckboxHover">Hover</label>
-                <input type="checkbox" id="sampleCombinedCheckboxEmpty">
+                <input type="checkbox" id="sampleCombinedCheckboxEmpty"/>
                 <label for="sampleCombinedCheckboxEmpty">Empty</label>
+                    Angular combine two: {{combineTwo}}
             </div>
         </fieldset>
 
-        <br/><br/><br/>
+        <br/><br/>
 
         <fieldset>
             <legend>Radio success buttons</legend>
             <div class="enhancedCheck enhancedCheck-inline enhancedCheck-success">
-                <input type="radio" name="rb" id="sampleRadio">
-                <label for="sampleRadio">Radio</label>
-                <input type="radio" name="rb" id="sampleRadioHover">
-                <label for="sampleRadioHover">Hover</label>
-                <input type="radio" name="rb" id="sampleRadioEmpty">
-                <label for="sampleRadioEmpty">Empty</label>
+                <input type="radio" name="rb" id="sampleRadio1" value="radio" ng-model="rb"/>
+                <label for="sampleRadio1">Radio</label>
+                <input type="radio" name="rb" id="sampleRadio1Hover" value="hover" ng-model="rb"/>
+                <label for="sampleRadio1Hover">Hover</label>
+                <input type="radio" name="rb" id="sampleRadio1Empty" value="empty" ng-model="rb"/>
+                <label for="sampleRadio1Empty">Empty</label>
+                    Angular radio: {{rb}}
             </div>
         </fieldset>
-
-				
-        <br/><br/><br/>
+		
+		
+        <br/><br/>
 
         <fieldset>
             <legend>Checkbox danger animated</legend>
             <div class="enhancedCheck enhancedCheck-danger enhancedCheck-animate">
                 <div>
-                <input type="checkbox" id="sampleCheckboxAnimate">
-                <label for="sampleCheckboxAnimate">Lightning slowly</label>
+                    <input type="checkbox" id="sampleCheckboxAnimate"/>
+                    <label for="sampleCheckboxAnimate">Lightning slowly</label>
                 </div>
             </div>
+        </fieldset>
+
+        <br/><br/>
+
+        <fieldset>
+            <legend>Checkbox toggle</legend>
+            <input type="checkbox" id="sampleCheckboxToggle" class="enhancedCheck-toggle"
+                   data-on="Enable" data-off="Disable" data-onstyle="success" data-offstyle="danger"
+                   data-style="rounded"
+                   ng-model="toggle" ng-change="toggleChange()" ng-disabled="toggleDisabled"/>
+            <br/>
+            <input type="checkbox" ng-model="toggle">
+            Angular toggle value: {{toggle}}
+            <br/>
+            <input type="checkbox" ng-model="toggleDisabled"/>
+            Angular toggle disabled: {{toggleDisabled}}
+
+
         </fieldset>
 
 	</div>
