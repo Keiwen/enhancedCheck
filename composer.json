@@ -1,5 +1,5 @@
 {
-  "name": "components/keiwen/enhanced-check",
+  "name": "keiwen/enhanced-check",
   "type": "component",
   "description": "Enhance checkboxes and radio buttons design",
   "version": "2.1"
