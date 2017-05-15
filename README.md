@@ -2,6 +2,10 @@
 
 **Require Bootstrap >= 3.0.0**
 
+*Known issue about angular disabled style*
+
+<a target="_blank" href="https://keiwen.github.io/enhancedCheck/">Demo </a>
+
 ## Components
 ### Basic
 Enhance checkboxes and radio buttons design. Just put input and label (**label after input**) in a div with desired class
@@ -22,7 +26,7 @@ Also provide toggles/checkboxes. Just provide "enhancedCheck-toggle" class on in
 If you need angular 1 support, include directive file and use 'ui.enhancedCheck' module in your app. Obviously **require angular** in that case. You can add ngModel (required), ngDisabled and ngChange on your input tag.
 
 ## Preview
-*See html or png sample in demo folder*
+*See index.html or following sample*
 ![alt tag](https://raw.githubusercontent.com/Keiwen/enhancedCheck/master/demo/enhancedCheck.png)
 
 ## Samples
