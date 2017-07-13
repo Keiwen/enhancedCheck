@@ -4,6 +4,10 @@
     display: inline;
 }
 
+.enhancedCheck-inline div {
+    display: inline;
+}
+
 .enhancedCheck label {
     border-radius: 3px;
     border: 1px solid #DDD;
